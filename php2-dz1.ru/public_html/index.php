@@ -1,8 +1,5 @@
 <?
 
-
-
-
 echo '<h1>Урок 1.</h1>';
 
 echo '<h2>Задания 1,2,3,4.</h2>';
@@ -42,7 +39,7 @@ class Page {
 class CatalogPage extends Page{
 
   protected $price; // цена товара
-  protected $anons; // анонс товара для каталожной ленты - лень так подробно делать
+  //protected $anons; // анонс товара для каталожной ленты - лень так подробно делать
   protected $currency;
   //protected $foto1; // Фото1 товара - лень так подробно делать
   //protected $foto2; // Фото2 товара - лень так подробно делать
