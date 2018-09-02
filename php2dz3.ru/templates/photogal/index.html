@@ -1,0 +1,83 @@
+{% include 'head.inc.html' %}
+
+</head>
+<body>
+
+<div class="container">
+
+	<!-- header-->
+	{% include 'header_inner.inc.html' %}
+	<!-- //header-->
+	
+	<div class="mh">
+		<!-- content + lcol -->
+		<div class="box ">
+			<!-- leftcolumn -->
+			{% include 'leftcolumn1.inc.html' %}		
+			<!-- //leftcolumn -->	
+
+			<div class="middle-box-left">
+				<div class="middle bg_middle">
+					<!-- navbar -->
+					<ul class="navbar">
+						<li><a href="/">Главная</a> &raquo;</li>
+						<li><span>Галерея</span></li>
+					</ul>
+					<!-- //navbar -->
+					<h1>{{ title }}</h1>
+					
+					{% if content_data.rubilnik == false %}
+					       <!-- gallery -->
+					  		<ul class="gallery">
+					  			{% for photoAlbum in content_data.photoAlbum %}
+									<li>
+										<a href="/photogal/?id={{photoAlbum.id_img}}">
+											<span class="img">
+												<img
+												 src="{{ photoAlbum.img_url|replace({'big': 'min'}) }}"
+												 alt="{{photoAlbum.img_name}}"
+												> <!-- тут надо, как-то превьюшки делать, а не big, на min подменять... -->
+											</span>
+											<span class="text">{{photoAlbum.img_name}}</span>
+											<span class="text">Популярность ({{photoAlbum.img_counter}})</span>
+										</a>
+									</li>							
+								{% endfor %}
+						    </ul>					
+						    <!-- // gallery --> 	
+					{% else %}
+					        <!-- Photo one -->
+						    {% for photoOne in content_data.photoOne %}						    
+						    <a class="view_big_img" rel="prettyPhoto" href="{{photoOne.img_url}}">
+								<span class="img">
+									<img
+									 src="{{ photoOne.img_url }}" 
+									 width="300"		 
+									 alt="{{ photoOne.img_name }}"
+									>
+								</span>
+								<span class="text">{{ photoOne.img_name }}</span>
+								<span class="text">Популярность ({{photoOne.img_counter}})</span>
+								<span class="text">Размер фото: {{photoOne.img_size}} Кб</span>
+							</a>
+							{% endfor %}
+							<p class="txtcenter"><a href="/photogal/">Вернуться в фотогалерею</a></p>
+						    <!-- // Photo one -->
+					{% endif %}
+
+
+					
+
+				    
+
+
+				</div>			 
+			</div>	
+		</div>
+		<!-- //content + lcol -->
+
+		
+	</div>
+
+
+{% include 'footer.inc.html' %}

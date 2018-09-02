@@ -1,0 +1,19 @@
+<p>
+    	<i class="fa fa-envelope">info@divorcegadget.com</i>
+        <i class="fa fa-phone">+1 (800) DIV-OR-CE</i>
+        <i class="fa fa-skype">divorcegadget</i>
+        <i class="fa fa-angle-down">меню</i>
+        <i class="fa fa-angle-right">меню</i>
+        
+        <i class="fa fa-legal">молоток</i>
+        <i class="fa fa-retweet">туда-сюда</i>
+        <i class="fa fa-laptop">ноутбук</i>
+        
+        <i class="fa fa-box-icon">хз</i>
+        <i class="fa fa-group">группа человечков</i>
+        <i class="fa fa-flag-o">флаг</i>
+        <i class="fa fa-stack-overflow">спираль выпадающая из коробки</i>
+        
+        
+        
+    </p>
